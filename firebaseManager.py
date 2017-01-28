@@ -16,9 +16,9 @@ class FirebaseManager:
 
 		self.firebase = pyrebase.initialize_app(config)
 
-		self.database = firebase.database()
+		self.database = self.firebase.database()
 
-		self.storage = firebase.storage()
+		self.storage = self.firebase.storage()
 
 
 
