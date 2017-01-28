@@ -2,9 +2,9 @@ import pyrebase
 
 class FirebaseManager:
 
-	firebase = nil
-	database = nil
-	storage = nil
+	firebase = None
+	database = None
+	storage = None
 
 	def __init__ (self):
 		config = {
