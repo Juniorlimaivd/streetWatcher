@@ -1,18 +1,20 @@
 #import pyrebase
 import cameraManager
+import firebaseManager
 #def connectBluetooth():
 
 camera = cameraManager.CameraManager()
 
 #def getLocation():
 
+serverManager = firebaseManager.FirebaseManager()
 
-#config = {
-#	"apiKey" : "apiKey",
-#	"authDomain" : "projectId.firebaseapp.com",
-#	"databaseURL": "https://databaseName.firebaseio.com",
-#	"storageBucket" : "projectId.appspot.com"
-#}
+config = {
+	"apiKey" : "apiKey",
+	"authDomain" : "projectId.firebaseapp.com",
+	"databaseURL": "https://databaseName.firebaseio.com",
+	"storageBucket" : "projectId.appspot.com"
+}
 
 #firebase = pyrebase.initialize_app(config)
 
@@ -35,4 +37,5 @@ camera = cameraManager.CameraManager()
    # 	led.blink("green")
 
     #sleep(1)
+
 

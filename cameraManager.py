@@ -11,5 +11,5 @@ class CameraManager:
 
 
 
-camera = CameraManager()
-camera.take_picture()
+#camera = CameraManager()
+#camera.take_picture()
