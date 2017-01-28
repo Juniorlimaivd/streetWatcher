@@ -4,7 +4,7 @@ class CameraManager:
 
 	def __init__ (self):
 		os.system("sudo chmod +x take_picture.sh")
-		os.system("raspberry")
+
 
 	def take_picture(self):
 		os.system("./take_picture.sh")
