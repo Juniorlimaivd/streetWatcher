@@ -3,14 +3,13 @@ import os
 class CameraManager:
 
 	def __init__ (self):
-		os.system("sudo chmod +x takepicture.sh")
+		os.system("sudo chmod +x take_picture.sh")
 		os.system("raspberry")
-		
 
-    def takePicture(self):        
-        os.system("./takepicture.sh")
+	def take_picture(self):
+		os.system("./take_picture.sh")
 
 
 
 camera = CameraManager()
-camera.takepicture()
+camera.take_picture()
