@@ -9,17 +9,6 @@ camera = cameraManager.CameraManager()
 
 serverManager = firebaseManager.FirebaseManager()
 
-config = {
-	"apiKey" : "apiKey",
-	"authDomain" : "projectId.firebaseapp.com",
-	"databaseURL": "https://databaseName.firebaseio.com",
-	"storageBucket" : "projectId.appspot.com"
-}
-
-#firebase = pyrebase.initialize_app(config)
-
-#database = firebase.database()
-
 #connectBluetooth()
 
 #led.blink("green")
