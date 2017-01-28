@@ -26,9 +26,12 @@ class FirebaseManager:
 		data = {"name": "Mortimer 'Morty' Smith"}
 		self.database.child("users").push(data)
 
+	def saveImage(self,imagename):
+		self.storage.child("images/image.jpg").put("~/Desktop/"+imagename)
 
 
 
 
 serverManager = FirebaseManager()
-serverManager.putTeste()
+#serverManager.putTeste()
+serverManager.saveImage("image2.jpg")
