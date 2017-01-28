@@ -20,7 +20,7 @@ class FirebaseManager:
 
 		self.database = self.firebase.database()
 
-		self.storage = self.firebase.storage()
+		#self.storage = self.firebase.storage()
 
 	def putTeste(self):
 		data = {"name": "Mortimer 'Morty' Smith"}
