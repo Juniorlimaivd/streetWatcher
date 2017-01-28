@@ -27,7 +27,7 @@ class FirebaseManager:
 		self.database.child("users").push(data)
 
 	def saveImage(self,imagename):
-		self.storage.child("images/image.jpg").put("~/Desktop/"+imagename)
+		self.storage.child("images/image.jpg").put("/home/pi/Desktop/"+imagename)
 
 
 
