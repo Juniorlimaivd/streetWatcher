@@ -1,4 +1,4 @@
-import pyrebase
+from pyrebase import *
 
 class FirebaseManager:
 
