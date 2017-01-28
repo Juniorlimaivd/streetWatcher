@@ -1,40 +1,38 @@
-import pyrebase
-import picamera
+#import pyrebase
+import cameraManager
+#def connectBluetooth():
 
-def connectBluetooth():
+camera = cameraManager.CameraManager()
+
+#def getLocation():
 
 
+#config = {
+#	"apiKey" : "apiKey",
+#	"authDomain" : "projectId.firebaseapp.com",
+#	"databaseURL": "https://databaseName.firebaseio.com",
+#	"storageBucket" : "projectId.appspot.com"
+#}
 
-def getLocation():
+#firebase = pyrebase.initialize_app(config)
 
-camera = picamera.PiCamera()
+#database = firebase.database()
 
-config = {
-	"apiKey" : "apiKey",
-	"authDomain" : "projectId.firebaseapp.com",
-	"databaseURL": "https://databaseName.firebaseio.com",
-	"storageBucket" : "projectId.appspot.com"
-}
+#connectBluetooth()
 
-firebase = pyrebase.initialize_app(config)
+#led.blink("green")
 
-database = firebase.database()
-
-connectBluetooth()
-
-led.blink("green")
-
-while True:
+#while True:
 	
-	actualLocation = getLocation()
+#	actualLocation = getLocation()
 
-	if notIn(actualLocation, picturedLocations()):
-		led.blink("blue")
-    	camera.take_picture("imagem.jpg")
-    	reference = sendtoStorage("imagem.jpg")
+#	if notIn(actualLocation, picturedLocations()):
+#		led.blink("blue")
+ #   	camera.take_picture("imagem.jpg")
+ #   	reference = sendtoStorage("imagem.jpg")
 
-    	createDatabaseReference(reference,actualLocation)
-    	led.blink("green")
+  #  	createDatabaseReference(reference,actualLocation)
+   # 	led.blink("green")
 
-    sleep(1)
+    #sleep(1)
 
