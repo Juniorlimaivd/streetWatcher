@@ -32,6 +32,11 @@ class LedManager:
 
 led = LedManager()
 
-led.blinkLed('red')
-led.blinkLed('blue')
-led.blinkLed('green')
+while True:
+	
+	led.blinkLed('red')
+	sleep(2)
+	led.blinkLed('blue')
+	sleep(2)
+	led.blinkLed('green')
+	sleep(2)
