@@ -17,7 +17,7 @@ class SocketManager:
 
 	def getLocation(self):
 		request = 'gimme_gps_plz'
-		conn.send(request.encode('ascii'))
+		self.conn.send(request.encode('ascii'))
 
 		data = self.conn.recv(1024)
 		data = data.decode('ascii')
