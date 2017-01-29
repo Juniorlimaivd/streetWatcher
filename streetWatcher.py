@@ -1,6 +1,7 @@
 #import pyrebase
 import cameraManager
 import firebaseManager
+import socketManager
 #def connectBluetooth():
 
 camera = cameraManager.CameraManager()
@@ -9,6 +10,7 @@ camera = cameraManager.CameraManager()
 
 serverManager = firebaseManager.FirebaseManager()
 
+gpsManager = socketManager.SocketManager()
 #connectBluetooth()
 
 #led.blink("green")

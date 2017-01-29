@@ -14,10 +14,10 @@ class SocketManager:
 		self.socket.bind(parametros)
 		self.socket.listen(1)
 		self.conn, self.addr = self.socket.accept()
-		print("connected")
+#		print("connected")
 
 	def getLocation(self):
-		print("send request")
+#		print("send request")
 		request = 'gimme_gps_plz'
 		self.conn.send(request.encode('ascii'))
 
@@ -33,13 +33,13 @@ class SocketManager:
 		return ( latitude,longitude )
 
 
-manager = SocketManager()
+#manager = SocketManager()
 
-while True:
-	sleep(10)
-	latitude, longitude = manager.getLocation()
+#while True:
+#	sleep(10)
+#	latitude, longitude = manager.getLocation()
 
-	print(latitude)
-	print(longitude)
+#	print(latitude)
+#	print(longitude)
 	
 	
