@@ -18,7 +18,7 @@ class SocketManager:
 		request = 'gimme_gps_plz'
 		conn.send(request.encode('ascii'))
 
-		data = conn.recv(1024)
+		data = self.conn.recv(1024)
 		data = data.decode('ascii')
 
 		numbers = data.split(':')
@@ -33,9 +33,10 @@ class SocketManager:
 manager = SocketManager()
 
 while True:
+	sleep(10)
 	latitude, longitude = manager.getLocation()
 
 	print(latitude)
 	print(longitude)
-	sleep(10)
+	
 	
