@@ -30,7 +30,7 @@ class SocketManager:
 		return ( latitude,longitude )
 
 
-let manager = SocketManager()
+manager = SocketManager()
 
 while True:
 	latitude, longitude = manager.getLocation()
