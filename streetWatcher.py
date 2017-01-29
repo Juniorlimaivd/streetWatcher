@@ -3,6 +3,7 @@ import firebaseManager
 import socketManager
 import ledManager
 from time import sleep
+import math
 
 def notIn (location, locations):
 	#print(location)
@@ -10,7 +11,7 @@ def notIn (location, locations):
 		#print("here")
 		for actual in locations :
 			#print(actual["latitude"],actual["longitude"])
-			if fabs(Float(actual["latitude"]) - Float(location[0])) < 0.50 and  fabs(Float(actual["latitude"]) - Float(location[1])) < 0.50: 
+			if math.fabs(Float(actual["latitude"]) - Float(location[0])) < 0.50 and  math.fabs(Float(actual["latitude"]) - Float(location[1])) < 0.50: 
 				return False
 			else:
 				return True
