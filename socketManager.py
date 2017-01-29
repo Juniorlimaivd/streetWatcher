@@ -28,3 +28,14 @@ class SocketManager:
 		longitude = numbers[1]
 
 		return ( latitude,longitude )
+
+
+let manager = SocketManager()
+
+while True:
+	latitude, longitude = manager.getLocation()
+
+	print(latitude)
+	print(longitude)
+	sleep(10)
+	
