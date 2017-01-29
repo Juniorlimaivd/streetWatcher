@@ -40,7 +40,7 @@ while True:
     	serverManager.createImageData(reference,actualLocation)
     	ledManager.blinkLed("green")
 
-    sleep(10)
+	sleep(10)
 
 
 
