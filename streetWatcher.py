@@ -39,7 +39,6 @@ while True:
 
     	serverManager.createImageData(reference,actualLocation)
     	ledController.blinkLed("green")
-
 	else:
     	print("dont need to take photos")
 	sleep(10)
