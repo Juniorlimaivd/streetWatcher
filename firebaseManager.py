@@ -55,9 +55,9 @@ class FirebaseManager:
 				"longitude" : location[1]
 		}
 
+		let imageTree  = {imagePath : location}
 
-
-		self.database.child("locations").child(imagePath).set(location)
+		self.database.child("locations").set(imageTree)
 
 		self.database.child("individual_ratings").child(imagePath).push(3.0)
 
