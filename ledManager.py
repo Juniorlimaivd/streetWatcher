@@ -6,7 +6,7 @@ class LedManager:
 	blueLedPin = 15
 
 	def __init__(self):
-		gpio.setmode(gpio.BOARD)
+		gpio.setmode(gpio.BCM)
 		gpio.setup(self.redLedPin, gpio.OUT)
 		gpio.setup(self.greenLedPin, gpio.OUT)
 		gpio.setup(self.blueLedPin, gpio.OUT)
