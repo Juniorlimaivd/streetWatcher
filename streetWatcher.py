@@ -21,8 +21,10 @@ def notIn (location, locations):
 			if math.fabs(float(actual["latitude"].encode('ascii')) - float(location[0].encode('ascii')) < 0.50 and math.fabs(float(actual["longitude"].encode('ascii')) - float(location[1].encode('ascii'))) < 0.50): 
 				print("olar")
 				out = False
+				print out + '3'
 				break
-			
+			print out + '2'
+		print out + '1'
 	return out
 	
 
