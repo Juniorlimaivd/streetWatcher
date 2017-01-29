@@ -36,7 +36,7 @@ class FirebaseManager:
 		data = self.database.child("locations").get()
 		print(data)
 		print(data.val())
-		if data.val() == None 
+		if data.val() == None:
 			return None
 		else:
 			return data.val().values()
