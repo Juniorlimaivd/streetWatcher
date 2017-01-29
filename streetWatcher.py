@@ -7,6 +7,7 @@ import math
 
 def notIn (location, locations):
 	print("here")
+	out = True
 	if locations != None:
 		print(location)
 		for actual in locations :
@@ -18,7 +19,9 @@ def notIn (location, locations):
 			print(math.fabs(float(actual["longitude"].encode('ascii')) - float(location[1].encode('ascii'))) < 0.50)
 			print(math.fabs(float(actual["longitude"].encode('ascii')) - float(location[1].encode('ascii'))))
 			if math.fabs(float(actual["latitude"].encode('ascii')) - float(location[0].encode('ascii')) < 0.50 and math.fabs(float(actual["longitude"].encode('ascii')) - float(location[1].encode('ascii'))) < 0.50): 
-				return False
+				print("olar")
+				out = False
+				pass
 			
 		return True
 	
