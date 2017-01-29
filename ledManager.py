@@ -1,9 +1,9 @@
 import RPi.GPIO as gpio
 from time import sleep
 class LedManager:
-	redLedPin = 2
-	greenLedPin = 3
-	blueLedPin = 4
+	redLedPin = 11
+	greenLedPin = 13
+	blueLedPin = 15
 
 	def __init__(self):
 		gpio.setmode(gpio.BOARD)
