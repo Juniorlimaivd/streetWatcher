@@ -33,10 +33,13 @@ class LedManager:
 led = LedManager()
 
 while True:
-	
+	print("acendendo pino 11")
 	led.blinkLed('red')
-	sleep(2)
+	sleep(5)
+	print("acendendo pino 13")
 	led.blinkLed('blue')
-	sleep(2)
+	sleep(5)
+	print("acendendo pino 15")
 	led.blinkLed('green')
-	sleep(2)
+	sleep(5)
+
