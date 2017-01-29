@@ -2,7 +2,7 @@ import cameraManager
 import firebaseManager
 import socketManager
 import ledManager
-import time
+from time import sleep
 
 def notIn (location, locations):
 
@@ -40,7 +40,7 @@ while True:
     	serverManager.createImageData(reference,actualLocation)
     	ledManager.blinkLed("green")
 
-    time.sleep(10)
+    sleep(10)
 
 
 
