@@ -6,6 +6,7 @@ class FirebaseManager:
 	database = None
 	storage = None
 	config = None
+	
 	def __init__ (self):
 		self.config = {
 			"apiKey" : "AIzaSyCdqFd6BOzCnx55lBezdzRq70kfmq8z5eY",
