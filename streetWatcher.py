@@ -54,12 +54,12 @@ while True:
 	print result
 	if result == True:
 		ledController.blinkLed("blue")
-    	name = camera.take_picture()
-    	reference = serverManager.saveImage(name)
-    	nameWithoutExtension = name.split('.')
+		name = camera.take_picture()
+		reference = serverManager.saveImage(name)
+		nameWithoutExtension = name.split('.')
 
-    	serverManager.createImageData(nameWithoutExtension[0],reference,actualLocation)
-    	ledController.blinkLed("green")
+		serverManager.createImageData(nameWithoutExtension[0],reference,actualLocation)
+		ledController.blinkLed("green")
 	
 	print("im here")
 	sleep(10)
