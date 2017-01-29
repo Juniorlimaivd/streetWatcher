@@ -40,7 +40,7 @@ while True:
     	reference = serverManager.saveImage(name)
     	nameWithoutExtension = name.split('.')
 
-    	serverManager.createImageData(nameWithoutExtension[0],actualLocation)
+    	serverManager.createImageData(nameWithoutExtension[0],reference,actualLocation)
     	ledController.blinkLed("green")
 	
 	print("im here")

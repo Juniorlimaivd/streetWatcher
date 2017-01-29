@@ -38,7 +38,7 @@ class FirebaseManager:
 		print(data.val())
 		return data.val() 
 
-	def createImageData(self, imageName, location):
+	def createImageData(self, imageName,imagePath, location):
 		data = {
 			"location": {
 				"latitude" : location[0],
