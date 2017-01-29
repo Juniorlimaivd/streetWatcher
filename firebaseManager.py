@@ -55,9 +55,9 @@ class FirebaseManager:
 
 
 
-		self.database.child("imagePath").set(location)
+		self.database.child("locations").child(imagePath).set(location)
 
-		self.database.child("individual_ratings").child("imagePath").push(3.0)
+		self.database.child("individual_ratings").child(imagePath).push(3.0)
 
 #serverManager = FirebaseManager()
 #serverManager.putTeste()

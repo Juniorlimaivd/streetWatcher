@@ -38,8 +38,10 @@ while True:
     	reference = serverManager.saveImage(name)
 
     	serverManager.createImageData(reference,actualLocation)
-    	ledManager.blinkLed("green")
+    	ledController.blinkLed("green")
 
+    else:
+    	print("dont need to take photos")
 	sleep(10)
 
 
