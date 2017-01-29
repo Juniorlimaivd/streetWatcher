@@ -21,12 +21,11 @@ def notIn (location, locations):
 			if math.fabs(float(actual["latitude"].encode('ascii')) - float(location[0].encode('ascii')) < 0.50 and math.fabs(float(actual["longitude"].encode('ascii')) - float(location[1].encode('ascii'))) < 0.50): 
 				print("olar")
 				out = False
-				pass
+				break
 			
-		return True
+	return out
 	
-	else:
-		return True
+
 
 camera = cameraManager.CameraManager()
 
