@@ -34,6 +34,8 @@ class FirebaseManager:
 
 	def getLocationsInDatabase(self):
 		data = self.database.child("locations").get()
+		print(data)
+		print(data.val())
 		return data.val() 
 
 	def createImageData(self, imagePath, location):
