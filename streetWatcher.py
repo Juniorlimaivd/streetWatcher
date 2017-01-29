@@ -15,7 +15,7 @@ def notIn (location, locations):
 			print(float(actual["latitude"].encode('ascii')))
 			print(float(location[0].encode('ascii')))
 			print(float(actual["latitude"].encode('ascii')) - float(location[0].encode('ascii')))
-			if math.fabs(float(actual["latitude"]) - float(location[0])) < 0.50 and  math.fabs(float(actual["latitude"]) - float(location[1])) < 0.50: 
+			if math.fabs(float(actual["latitude"].encode('ascii')) - float(location[0]).encode('ascii')) < 0.50 and  math.fabs(float(actual["latitude"].encode('ascii')) - float(location[1].encode('ascii'))) < 0.50: 
 				return False
 			
 		return True
