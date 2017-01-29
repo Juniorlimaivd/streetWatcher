@@ -9,7 +9,7 @@ def notIn (location, locations):
 	print("here")
 	if locations != None:
 		#print("here")
-		for (key, actual) in locations :
+		for actual in locations :
 			print actual
 			#print(actual["latitude"],actual["longitude"])
 			if math.fabs(float(actual["latitude"]) - float(location[0])) < 0.50 and  math.fabs(float(actual["latitude"]) - float(location[1])) < 0.50: 

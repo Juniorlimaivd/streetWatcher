@@ -36,7 +36,7 @@ class FirebaseManager:
 		data = self.database.child("locations").get()
 		print(data)
 		print(data.val())
-		return data.val()
+		return data.val().values()
 
 	def createImageData(self, imageName,imagePath, location):
 		data = {
