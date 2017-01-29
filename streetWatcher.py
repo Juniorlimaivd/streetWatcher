@@ -6,7 +6,7 @@ from time import sleep
 import math
 
 def notIn (location, locations):
-	#print(location)
+	print("here")
 	if locations != None:
 		#print("here")
 		for actual in locations :
@@ -14,8 +14,9 @@ def notIn (location, locations):
 			#print(actual["latitude"],actual["longitude"])
 			if math.fabs(float(actual["latitude"]) - float(location[0])) < 0.50 and  math.fabs(float(actual["latitude"]) - float(location[1])) < 0.50: 
 				return False
-			else:
-				return True
+			
+		return True
+	
 	else:
 		return True
 
