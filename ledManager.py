@@ -36,10 +36,10 @@ while True:
 	print("acendendo pino 11")
 	led.blinkLed('red')
 	sleep(5)
-	print("acendendo pino 13")
+	print("acendendo pino 15")
 	led.blinkLed('blue')
 	sleep(5)
-	print("acendendo pino 15")
+	print("acendendo pino 13")
 	led.blinkLed('green')
 	sleep(5)
 

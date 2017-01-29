@@ -1,5 +1,5 @@
 import os
-
+import time
 class CameraManager:
 
 	def __init__ (self):
@@ -7,9 +7,13 @@ class CameraManager:
 
 
 	def take_picture(self):
-		os.system("./take_picture.sh")
+		date = time.strftime("%Y-%m-%d_%H%M")
+		os.system("./take_picture.sh" + date)
+
+		return date + '.jpg'
 
 
 
-#camera = CameraManager()
-#camera.take_picture()
+camera = CameraManager()
+name = camera.take_picture()
+print(name)

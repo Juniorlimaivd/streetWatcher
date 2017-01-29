@@ -1,5 +1,4 @@
 #!/bin/bash
 
-DATE=$(date +"%Y-%m-%d_%H%M")
 
-fswebcam -r 1280x720 --no-banner /home/pi/Desktop/$DATE.jpg
+fswebcam -r 1280x720 --no-banner /home/pi/Desktop/$1.jpg
