@@ -1,4 +1,5 @@
 import socket
+from time import sleep
 
 class SocketManager:
 	socket = None
