@@ -7,23 +7,23 @@ class LedManager:
 
 	def __init__(self):
 		gpio.setmode(gpio.BOARD)
-		gpio.setup(redLedPin, gpio.OUT)
-		gpio.setup(greenLedPin, gpio.OUT)
-		gpio.setup(blueLedPin, gpio.OUT)
+		gpio.setup(self.redLedPin, gpio.OUT)
+		gpio.setup(self.greenLedPin, gpio.OUT)
+		gpio.setup(self.blueLedPin, gpio.OUT)
 
 	def blinkLed(self,led):
 		if led == 'red':
-			gpio.output(redLedPin, gpio.HIGH)
-			gpio.output(blueLedPin, gpio.LOW)
-			gpio.output(greenLedPin, gpio.LOW)
+			gpio.output(self.redLedPin, gpio.HIGH)
+			gpio.output(self.blueLedPin, gpio.LOW)
+			gpio.output(self.greenLedPin, gpio.LOW)
 		elif led == 'blue':
-			gpio.output(redLedPin, gpio.LOW)
-			gpio.output(blueLedPin, gpio.HIGH)
-			gpio.output(greenLedPin, gpio.LOW)
+			gpio.output(self.redLedPin, gpio.LOW)
+			gpio.output(self.blueLedPin, gpio.HIGH)
+			gpio.output(self.greenLedPin, gpio.LOW)
 		else:
-			gpio.output(redLedPin, gpio.LOW)
-			gpio.output(blueLedPin, gpio.LOW)
-			gpio.output(greenLedPin, gpio.HIGH)
+			gpio.output(self.redLedPin, gpio.LOW)
+			gpio.output(self.blueLedPin, gpio.LOW)
+			gpio.output(self.greenLedPin, gpio.HIGH)
 
 	def finishLedManager(self):
 		gpio.cleanup()
