@@ -50,8 +50,9 @@ while True:
 	actualLocation = gpsManager.getLocation()
 
 	presentLocations = serverManager.getLocationsInDatabase()
-
-	if notIn(actualLocation, presentLocations):
+	result = notIn(actualLocation, presentLocations)
+	print result
+	if result == True:
 		ledController.blinkLed("blue")
     	name = camera.take_picture()
     	reference = serverManager.saveImage(name)
