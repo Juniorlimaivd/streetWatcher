@@ -8,7 +8,7 @@ class CameraManager:
 
 	def take_picture(self):
 		date = time.strftime("%Y-%m-%d_%H%M")
-		os.system("./take_picture.sh" + date)
+		os.system("./take_picture.sh " + date)
 
 		return date + '.jpg'
 
