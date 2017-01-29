@@ -12,7 +12,7 @@ class SocketManager:
 		parametros = (self.host,self.port)
 		self.socket.bind(parametros)
 		self.socket.listen(1)
-		self.conn, self.addr = s.accept()
+		self.conn, self.addr = self.socket.accept()
 
 	def getLocation(self):
 		request = 'gimme_gps_plz'
