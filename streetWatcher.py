@@ -38,8 +38,9 @@ while True:
 		ledController.blinkLed("blue")
     	name = camera.take_picture()
     	reference = serverManager.saveImage(name)
+    	nameWithoutExtension = name.split('.')
 
-    	serverManager.createImageData(reference,actualLocation)
+    	serverManager.createImageData(nameWithoutExtension[0],actualLocation)
     	ledController.blinkLed("green")
 	
 	print("im here")

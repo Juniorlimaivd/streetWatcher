@@ -38,7 +38,7 @@ class FirebaseManager:
 		print(data.val())
 		return data.val() 
 
-	def createImageData(self, imagePath, location):
+	def createImageData(self, imageName, location):
 		data = {
 			"location": {
 				"latitude" : location[0],
@@ -55,7 +55,7 @@ class FirebaseManager:
 				"longitude" : location[1]
 		}
 
-		imageTree  = {imagePath : location}
+		imageTree  = {imageName : location}
 
 		self.database.child("locations").set(imageTree)
 
