@@ -28,6 +28,8 @@ def notIn (location, locations):
 			print '2'
 		print out 
 		print '1'
+	print out 
+	print '0'
 	return out
 	
 
