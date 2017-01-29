@@ -1,32 +1,49 @@
-#import pyrebase
 import cameraManager
 import firebaseManager
 import socketManager
-#def connectBluetooth():
+import ledManager
+import time
+
+def notIn (location, locations):
+
+	if locations != None:
+		for actual in locations :
+			if fabs(Float(actual["latitude"]) - Float(location[0])) < 0.50 and  fabs(Float(actual["latitude"]) - Float(location[1])) < 0.50: 
+				return False
+			else:
+				return True
+	else:
+		return True
 
 camera = cameraManager.CameraManager()
-
-#def getLocation():
 
 serverManager = firebaseManager.FirebaseManager()
 
 gpsManager = socketManager.SocketManager()
-#connectBluetooth()
+ledController = ledManager.LedManager()
 
-#led.blink("green")
+ledController.blinkLed("green")
 
-#while True:
+
+
+while True:
 	
-#	actualLocation = getLocation()
+	actualLocation = gpsManager.getLocation()
 
-#	if notIn(actualLocation, picturedLocations()):
-#		led.blink("blue")
- #   	camera.take_picture("imagem.jpg")
- #   	reference = sendtoStorage("imagem.jpg")
+	presentLocations = serverManager.getLocationsInDatabase()
 
-  #  	createDatabaseReference(reference,actualLocation)
-   # 	led.blink("green")
+	if notIn(actualLocation, presentLocations):
+		ledController.blinkLed("blue")
+    	name = camera.take_picture()
+    	reference = serverManager.saveImage(name)
 
-    #sleep(1)
+    	serverManager.createImageData(reference,actualLocation)
+    	ledManager.blinkLed("green")
+
+    time.sleep(10)
+
+
+
+
 
 

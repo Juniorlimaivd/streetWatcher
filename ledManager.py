@@ -25,21 +25,25 @@ class LedManager:
 			gpio.output(self.blueLedPin, gpio.LOW)
 			gpio.output(self.greenLedPin, gpio.HIGH)
 
+	def turnAllOff(self):
+		gpio.output(self.redLedPin, gpio.LOW)
+		gpio.output(self.blueLedPin, gpio.LOW)
+		gpio.output(self.greenLedPin, gpio.LOW)
 	def finishLedManager(self):
 		gpio.cleanup()
 
 
 
-led = LedManager()
+#led = LedManager()
 
-while True:
-	print("acendendo pino 11")
-	led.blinkLed('red')
-	sleep(5)
-	print("acendendo pino 15")
-	led.blinkLed('blue')
-	sleep(5)
-	print("acendendo pino 13")
-	led.blinkLed('green')
-	sleep(5)
+#while True:
+#	print("acendendo pino 11")
+#	led.blinkLed('red')
+#	sleep(5)
+#	print("acendendo pino 15")
+#	led.blinkLed('blue')
+#	sleep(5)
+#	print("acendendo pino 13")
+#	led.blinkLed('green')
+#	sleep(5)
 

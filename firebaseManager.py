@@ -6,7 +6,7 @@ class FirebaseManager:
 	database = None
 	storage = None
 	config = None
-	
+
 	def __init__ (self):
 		self.config = {
 			"apiKey" : "AIzaSyCdqFd6BOzCnx55lBezdzRq70kfmq8z5eY",
@@ -28,11 +28,37 @@ class FirebaseManager:
 		self.database.child("users").push(data)
 
 	def saveImage(self,imagename):
-		self.storage.child("images/image.jpg").put("/home/pi/Desktop/"+imagename)
+		self.storage.child("images/"+imagename).put("/home/pi/Desktop/"+imagename)
+		return "images/"+imagename
+
+
+	def getLocationsInDatabase(self):
+		data = self.database.child("locations").get()
+		return data.val() 
+
+	def createImageData(self, imagePath, location):
+		data = {
+			"location": {
+				"latitude" : location[0],
+				"longitude" : location[1]
+			},
+			"reference" : imagePath,
+			"midRating" : 3.0,
+		}
+
+		self.database.child("images").push(data)
+
+		location = {
+				"latitude" : location[0],
+				"longitude" : location[1]
+		}
 
 
 
+		self.database.child("imagePath").set(location)
 
-serverManager = FirebaseManager()
+		self.database.child("individual_ratings").child("imagePath").push(3.0)
+
+#serverManager = FirebaseManager()
 #serverManager.putTeste()
-serverManager.saveImage("image2.jpg")
+#serverManager.saveImage("image2.jpg")

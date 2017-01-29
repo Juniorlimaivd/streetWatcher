@@ -14,10 +14,10 @@ class SocketManager:
 		self.socket.bind(parametros)
 		self.socket.listen(1)
 		self.conn, self.addr = self.socket.accept()
-#		print("connected")
+#		
 
 	def getLocation(self):
-#		print("send request")
+#		
 		request = 'gimme_gps_plz'
 		self.conn.send(request.encode('ascii'))
 

@@ -14,6 +14,6 @@ class CameraManager:
 
 
 
-camera = CameraManager()
-name = camera.take_picture()
-print(name)
+#camera = CameraManager()
+#name = camera.take_picture()
+#print(name)
